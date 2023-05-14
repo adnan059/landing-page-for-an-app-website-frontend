@@ -1,0 +1,52 @@
+.review .box-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.review .box-container .box {
+  background: #fff;
+  margin: 1rem;
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  flex: 1 1 30rem;
+  border-radius: 0.5rem;
+}
+
+.review .box-container .box > i {
+  position: absolute;
+  top: 1rem;
+  left: 1.2rem;
+  font-size: 8rem;
+  color: var(--prim);
+  opacity: 0.4;
+}
+
+.review .box-container .box .user img {
+  border-radius: 50%;
+  object-fit: cover;
+  height: 7rem;
+  width: auto;
+  margin-top: 2rem;
+}
+
+.review .box-container .box .user h3 {
+  color: var(--sec);
+  font-size: 2rem;
+}
+
+.review .box-container .box .user .stars i {
+  color: var(--prim);
+  font-size: 1.5rem;
+  padding: 1rem 0;
+}
+
+.review .box-container .box .user .comment {
+  color: #666;
+  font-size: 1.4rem;
+  padding: 1rem;
+}

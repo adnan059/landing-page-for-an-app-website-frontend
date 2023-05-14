@@ -1,0 +1,62 @@
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("../../assets/cornerblob.svg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: 8rem;
+}
+
+.home .image img {
+  width: 30vw;
+
+  animation: float 3s linear infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0rem);
+  }
+  50% {
+    transform: translateY(-3.5rem);
+  }
+}
+
+.home .content h3 {
+  font-size: 5.5rem;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.home .content h3 span {
+  color: var(--prim);
+  text-transform: uppercase;
+}
+
+.home .content p {
+  font-size: 1.7rem;
+  color: #666;
+  padding: 1rem 0;
+}
+
+/* ********Media Queries*********** */
+
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column-reverse;
+  }
+
+  .home .image img {
+    width: 45vw;
+  }
+
+  .home .content h3 {
+    font-size: 3.6rem;
+  }
+
+  .home .content p {
+    font-size: 1.5rem;
+  }
+}

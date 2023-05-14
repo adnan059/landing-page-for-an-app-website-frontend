@@ -1,0 +1,84 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  padding: 2rem 9%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+header .logo {
+  font-size: 2rem;
+  color: var(--sec);
+}
+
+header .logo span {
+  color: var(--prim);
+}
+
+header .navbar a {
+  font-size: 1.7rem;
+  margin-left: 2rem;
+  color: var(--sec);
+}
+
+header .navbar a:hover {
+  color: var(--prim);
+}
+
+header input {
+  display: none;
+}
+
+header label {
+  font-size: 3rem;
+  color: var(--sec);
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* ======== Media Queries ========= */
+
+@media (max-width: 768px) {
+  header label {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 1rem 2rem;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    transform-origin: top;
+    transform: scaleY(0);
+    opacity: 0;
+  }
+
+  header .navbar a {
+    width: 100%;
+    text-align: center;
+    margin: 1rem 0;
+    font-size: 2rem;
+    padding: 0.5rem 0;
+  }
+
+  header .navbar a:hover {
+    background-color: var(--lsec);
+  }
+
+  .navbar.clicked {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
